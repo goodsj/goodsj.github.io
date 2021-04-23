@@ -4,7 +4,7 @@
 set -e
 
 # build
-npm run build
+npm run docs:build
 
 # navigate into the build output directory
 cd docs/.vuepress/dist
@@ -14,12 +14,12 @@ cd docs/.vuepress/dist
 
 # git init
 git add -A
-git commit -m 'deploy with vuepress'
+git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+git push -f git@github.com:goodsj/goodsj.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/goodsj/goodsj.github.io.git master:gh-pages
+# git push -f https://github.com/goodsj/goodsj.github.io.git master:gh-pages
 
 cd -
